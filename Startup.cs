@@ -26,6 +26,7 @@ namespace Szkolenie_techniczne_3_projekt
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
             services.AddDbContext<ProjectDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectDbConnectionString")));
         }
 

@@ -1,0 +1,21 @@
+﻿@*@model IEnumerable<Szkolenie_techniczne_3_projekt.Models.Teachers>*@
+
+@model IEnumerable<Szkolenie_techniczne_3_projekt.Models.Teachers>
+
+<h1>Lista produktów</h1>
+
+<ol>
+    @foreach (var teachers in Model)
+    {
+    <li>
+        <b>@teachers.imie</b> - @teachers.imie
+        <a href="@Url.Action("Details","Teachers", new { Id = teachers.id })">Szczegóły</a>
+
+            @using (Html.BeginForm("Delete", "Teachers", FormMethod.Post))
+        {
+            <input type="hidden" name="Id" value="@teachers.id" />
+            <button type="submit">Usuń</button>
+        }
+    </li>
+    }
+</ol>

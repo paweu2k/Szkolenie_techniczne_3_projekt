@@ -1,0 +1,11 @@
+﻿@model Szkolenie_techniczne_3_projekt.Models.Teachers
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Formularz dodający produkt do magazynu</h1>
+
+
+@Html.Partial("_addprodukt",Model)
+
+<p>Id po zapisie<strong>@TempData["id"]</strong></p>

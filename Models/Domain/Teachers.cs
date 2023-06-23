@@ -8,8 +8,8 @@ namespace Szkolenie_techniczne_3_projekt.Models
 {
     public class Teachers
     {
-
-        public Guid id { get; set; }
+        [Key]
+        public int id { get; set; }
         [Required]
         [MaxLength(24)]
         public string imie { get; set; }

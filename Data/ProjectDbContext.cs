@@ -13,6 +13,7 @@ namespace Szkolenie_techniczne_3_projekt.Data
         {
         }
 
+       
         public DbSet<Students> Students { get; set; }
         public DbSet<Teachers> Teachers { get; set; }
     }
